@@ -10,14 +10,14 @@ export default {
   module: {
     rules: [
       {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader']
-      }, {
         test: /\.(png|svg|jpg|gif)$/,
         use: ['file-loader']
       }, {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         use: ['file-loader']
+      }, {
+        test: /\.less$/,
+        use: ['style-loader', 'css-loader', 'less-loader']
       }
     ]
   },
@@ -27,8 +27,7 @@ export default {
       jQuery: 'jquery'
     }),
     new HtmlWebpackPlugin({
-      title: 'Output Management'
+      template: './src/index.html'
     })
   ]
 };
-

@@ -1,7 +1,7 @@
 import * as crypto from './crypto';
 
 import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import './main.less';
 
 function component() {
   var element = document.createElement('div');
@@ -14,5 +14,5 @@ function component() {
   return element;
 }
 
-document.body.appendChild(component());
+// document.body.appendChild(component());
 
